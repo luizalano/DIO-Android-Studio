@@ -8,9 +8,10 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextTextNome"
+        android:id="@+id/txtNomeAluno"
         android:layout_width="266dp"
         android:layout_height="70dp"
+        android:layout_marginTop="32dp"
         android:autofillHints=""
         android:background="#B0BBED"
         android:ems="10"
@@ -20,13 +21,13 @@
         android:text="@string/nome_aluno"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextNota1"
+        app:layout_constraintBottom_toTopOf="@+id/txtNota1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextNota1"
+        android:id="@+id/txtNota1"
         android:layout_width="266dp"
         android:layout_height="70dp"
         android:background="#B0BBED"
@@ -37,14 +38,14 @@
         android:text="@string/primeira_nota"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextNota2"
+        app:layout_constraintBottom_toTopOf="@+id/txtNota2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextNome" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeAluno" />
 
     <EditText
-        android:id="@+id/editTextTextNota2"
+        android:id="@+id/txtNota2"
         android:layout_width="266dp"
         android:layout_height="70dp"
         android:background="#B0BBED"
@@ -55,13 +56,13 @@
         android:text="@string/segunda_nota"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextFaltas"
+        app:layout_constraintBottom_toTopOf="@+id/txtNumeroFaltas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextNota1" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNota1" />
 
     <EditText
-        android:id="@+id/editTextTextFaltas"
+        android:id="@+id/txtNumeroFaltas"
         android:layout_width="266dp"
         android:layout_height="70dp"
         android:background="#B0BBED"
@@ -72,29 +73,33 @@
         android:text="@"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnCalcula"
+        app:layout_constraintBottom_toTopOf="@id/btnCalcula"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextNota2" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnCalcula"
         android:layout_width="264dp"
         android:layout_height="80dp"
+        android:layout_marginTop="44dp"
         android:background="#370000"
         android:text="Calcula"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/azul_escuro"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="415dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumeroFaltas" />
 
     <EditText
-        android:id="@+id/editTextTextMedia"
+        android:id="@+id/txtResultado"
         android:layout_width="266dp"
         android:layout_height="174dp"
         android:layout_marginTop="24dp"
-        android:background="#B0BBED"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="70dp"
+        android:background="@color/rosa_claro"
         android:ems="10"
         android:hint="Media"
         android:inputType="number"
@@ -102,10 +107,10 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCalcula"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
